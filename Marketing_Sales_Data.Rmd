@@ -12,6 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ## About the Data Set
 
 This data set is sourced from Kaggle at the following URL: https://www.kaggle.com/datasets/yakhyojon/marketing-promotion/data
+The data do not belong to me and all rights are reserved by the original owner.
 
 Each row corresponds to an independent marketing promotion where their business uses TV, social media, radio, and influencer promotions to increase sales.
 The features in the data are:
@@ -25,16 +26,21 @@ The features in the data are:
 ## Load Necessary Packages
 
 ``` {r echo=TRUE, message = F, warning = F}
-# Load in the tidyverse packages
+# family of packages with many useful functions
 library(tidyverse)
+# package containing function "getURL", allowing data to be read from GitHub
+library(RCurl)
+# package containing function to compute all pairwise comparisons
 library(emmeans)
+# package containing function "regsubsets" for computing AIC
 library(leaps)
 ```
 
 ## Read in Data
 
 ```{r echo = TRUE, message = F, warning = F}
-marketing_data <- read_csv("C:/Users/jorda/OneDrive/Documents/RStudio Files/Practice/marketing_sales_data.csv")
+url <- getURL("https://raw.githubusercontent.com/jrk3110/Portfolio/refs/heads/main/marketing_sales_data.csv")
+marketing_data <- read_csv(url, sep = ",")
 ```
 
 ## Clean the Data
