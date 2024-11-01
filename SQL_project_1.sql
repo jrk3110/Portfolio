@@ -1,3 +1,5 @@
+-- Utilizing "Classic Models" database in PostgreSQL --
+
 ----- SELECT Problems -----
 -- 1
 SELECT city
