@@ -40,7 +40,7 @@ library(leaps)
 
 ```{r echo = TRUE, message = F, warning = F}
 url <- getURL("https://raw.githubusercontent.com/jrk3110/Portfolio/refs/heads/main/marketing_sales_data.csv")
-marketing_data <- read_csv(url, sep = ",")
+marketing_data <- read_csv(url)
 ```
 
 ## Clean the Data
