@@ -29,7 +29,6 @@ WHERE msrp = (
 SELECT productname, (msrp - buyprice) as Profit
 FROM products
 ORDER BY Profit desc LIMIT 1;
-	);
 
 -- 6
 SELECT country, count(customernumber) as Customers
